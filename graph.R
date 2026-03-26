@@ -34,8 +34,7 @@ couleurs = c("LEXG" = "#bb0000",
              
              "LNC" = "#dddddd")
 
-df_resultats = readRDS(file = "resultats.rds")
-
+df_resultats = readRDS(file = "C:/Users/tdelema/Documents/projects/municipales/resultats.rds")
 
 # show_boxes -> TRUE si on veut numéroter les sièges en bas
 # n_legend : nombre de lignes de la légende
@@ -394,14 +393,16 @@ plot_fusion = function(ville = "Belley", distribution = T,show_boxes = F,
 
 # Exemple d'utilisation
 # 1/ Pour print le nom des listes et une v1 du graphique 
-plot_fusion("Reims") 
+plot_fusion("Toulouse") 
 # 2/ Pour personnaliser les couleurs et le nom des listes
-plot_fusion("Reims",
-            col = c("POUR REIMS UNE NOUVELLE ÈRE AVEC ANNE-SOPHIE FRIGOUT" = "#0D378A",
-                    "LES RÉMOIS AU COEUR - Liste d'Union de la Droite, du Centre et des Indépendants" = "#0066cc"
-                    ),
-            legend = c("POUR REIMS UNE NOUVELLE ÈRE AVEC ANNE-SOPHIE FRIGOUT" = "Pour Reims (RN)",
-                       "LES RÉMOIS AU COEUR - Liste d'Union de la Droite, du Centre et des Indépendants" = "Les Rémois au coeur (LR)"
-                       )
-)
 
+plot_fusion("Reims",
+            col = c("LES RÉMOIS AU COEUR - Liste d'Union de la Droite, du Centre et des Indépendants" 
+                    = "#adc1fd",
+                    "POUR REIMS UNE NOUVELLE ÈRE AVEC ANNE-SOPHIE FRIGOUT" = "#404040"
+            ),
+            legend = c("LES RÉMOIS AU COEUR - Liste d'Union de la Droite, du Centre et des Indépendants" 
+                       = "Lang (DVD)",
+                       "POUR REIMS UNE NOUVELLE ÈRE AVEC ANNE-SOPHIE FRIGOUT" = "Frigout (RN)"
+            )
+)
